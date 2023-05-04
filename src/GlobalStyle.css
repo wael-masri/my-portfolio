@@ -171,7 +171,7 @@ img {
 /*===================== mobile ====================*/
 
 
-@media screen and (max-width:1200px) {
+/* @media screen and (max-width:1200px) {
     :root {
         --big-font-size:36px;
         --h1-font-size:32px;
@@ -244,7 +244,7 @@ img {
     margin-bottom: 24px !important;
    }
 }
-
+ */
 @media screen and (max-width:768px) {
   
 .home {
