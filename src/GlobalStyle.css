@@ -1,0 +1,357 @@
+/*================= GOOGLE FONTS =====================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap');
+
+/*================= CSS VARIABLES =====================*/
+:root{
+    /*==========COLORS============*/
+    /* COLOR MODE HSL()*/
+    --first-color: hsl(271,76%,53%);
+    --title-color: hsl(0,0%,40%);
+    --text-color: hsl(0,0%,50%);
+    --body-color: hsl(0,0%,100%);
+    --container-color: hsl(0,0%,93%);
+    --border-color: hsl(0,0%,87%);
+    --text-white: #fff;
+
+    /*==========FONT AND TYPOGRAPHY============*/
+    --body-font: 'Open Sans', sans-serif;
+    --second-font:'Poppins', sans-serif;
+    --big-font-size:56px;
+    --h1-font-size:50px;
+    --h2-font-size:32px;
+    --h3-font-size:24px;
+    --large-font-size:18px;
+    --normal-font-size:16px;
+    --small-font-size:15px;
+    --smaller-font-size:14px;
+    --tiny-font-size:12px;
+
+    /*==========FONT WEIGHT============*/
+      --weight-400: 400;
+      --weight-500: 500;
+      --weight-600: 600;
+      --weight-700: 700;
+      --weight-800: 800;
+}
+
+.dark-theme {
+    --title-color: hsl(0,0%,100%);
+    --text-color: hsl(0,0%,80%);
+    --body-color: hsl(0,0%,7%);
+    --container-color: hsl(0,1%,17%);
+    --border-color: hsl(0,0%,15%);
+}
+/*================= BASE =====================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--weight-500);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+
+}
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--weight-700);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+button,
+input,
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*================= REUSABLE CSS =====================*/
+
+.container {
+    max-width: 1140px;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+.section__title span{
+    color: var(--first-color);
+}
+.grid {
+    display: grid;
+    gap: 30px;
+}
+.section {
+    padding-block: 70px;
+}
+
+.button {
+    display: inline-block;
+    color: var(--title-color);
+    border: 1px solid var(--first-color);
+    padding: 15px 70px 15px 35px;
+    font-family: var(--second-font);
+    border-radius: 35px;
+    font-size: var(--small-font-size);
+    font-weight: var(--weight-500);
+    position: relative;
+    overflow: hidden;
+    transition: all .25px ease-in-out;
+}
+.button__icon {
+    background-color: var(--first-color);
+    position: absolute;
+    inset-block: -2px;
+    right: 0;
+    width: 55px;
+    border-radius: 50%;
+    color: var(--text-white);
+    font-size: var(--large-font-size);
+    text-align: center;
+    line-height: 60px;
+}
+
+
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--first-color);
+    z-index: -1;
+    transition: all .3s ease-out;
+    transform: translateX(100%);
+}
+
+.button:hover::before{
+    transform: translateX(0);
+}
+
+
+.button:hover{
+    color: var(--text-white);
+}
+
+.section__title{
+    font-size: var(--big-font-size);
+    font-weight: var(--weight-800);
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+/*===================== mobile ====================*/
+
+
+@media screen and (max-width:1200px) {
+    :root {
+        --big-font-size:36px;
+        --h1-font-size:32px;
+        --h2-font-size:24px;
+        --h3-font-size:20px;
+        --large-font-size:16px;
+        --normal-font-size:15px;
+        --small-font-size:14px;
+        --smaller-font-size:13px;
+        --tiny-font-size:11px;
+    }
+    .container{
+        max-width: calc(100% -180px);
+    }
+
+    .grid {
+        gap:20px!important;
+    }
+    .home__data {
+        padding-right: 40px!important;
+    }
+    .home__title {
+        font-size: var(--big-font-size);
+    }
+    .home__description {
+        font-size: var(--small-font-size);
+    }
+ 
+    .stats__title{
+        padding-left: 35px!important;
+    }
+    .stats__title::before{
+        width: 22px!important;
+    }
+    .progress__circle{
+        width: 100px!important;
+        height: 100px!important;
+    }
+
+   .skills__container {
+    row-gap: 32px!important;
+   }
+   .skills__title {
+    margin-top: 20px!important;
+   }
+   .resume__icon {
+    width: 36px!important;
+    height: 36px!important;
+    line-height: 38px !important;
+   }
+   .resume__item {
+    padding-left: 55px !important;
+   }
+
+   .portfolio__modal-content{
+    min-width: 600px !important;
+   }
+   .modal__close {
+    width: 40px !important;
+    height: 40px !important;
+   }
+   .form__input-group {
+    grid-template-columns: repeat(2,1fr) !important;
+    column-gap: 24px !important;
+   }
+   .form__input-group .form__input-div:last-child {
+    grid-column: 1/-1 !important;
+   }
+   .form__input-div {
+    margin-bottom: 24px !important;
+   }
+}
+
+@media screen and (max-width:768px) {
+  
+.home {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    row-gap: 10px !important;
+    padding: 20px !important;
+}
+.color__block {
+    display: none !important;
+}
+.home__img {
+    width: 270px !important;
+    height: 270px !important;
+    border-radius: 50% !important;
+    margin-top: auto !important;
+}
+.home__content {
+    min-width: 500px !important;
+    text-align: center !important;
+    margin-bottom: auto !important;
+}
+.home__title {
+    padding-left: 0px !important;
+}
+.home__title::before {
+    all: unset !important;
+}
+.home__title span {
+    display: block !important;
+}
+.container {
+    max-width: 540px !important;
+    padding-inline: 45px !important;
+}
+.about__container,
+.resume__container {
+    grid-template-columns: 1fr !important;
+}
+.portfolio__modal-content {
+    padding: 10px 10px !important;
+}
+.modal__close {
+    top: -9% !important;
+    right: 0% !important;
+}
+.portfolio__container {
+    grid-template-columns: repeat(2,1fr) !important;
+}
+.contact__container {
+    grid-template-columns: 2fr !important;
+}
+.portfolio__modal-content {
+    min-width: 320px !important;
+}
+}
+
+@media screen and (max-width:570px) {
+
+.nav__toggle{
+    top: 20px !important;
+    right: 15px !important;
+}
+.nav__link {
+    column-gap: 20px !important;
+}
+.nav__icon,
+.nav__name {
+    font-size: var(--h3-font-size) !important;
+}
+.skills__container {
+    grid-template-columns: repeat(2,1fr) !important;
+}
+.portfolio__container {
+    grid-template-columns: 1fr !important;
+}
+.modal__list {
+    grid-template-columns: 1fr !important;
+}
+
+.modal__img {
+    height: 300px !important;
+}
+.about__container, .info__list, .stats, .resume__container {
+    grid-template-columns: 1fr !important;
+}
+.form__input-group {
+    grid-template-columns: 1fr !important;
+}
+.style__switcher-toggler,
+.theme__toggler {
+    width: 40px !important;
+    height: 40px !important;
+}
+.theme__img {
+    width: 25px !important;
+}
+
+.style__switcher-toggler {
+    top: 15% !important;
+}
+.theme__toggler {
+    bottom: 15% !important;
+}
+.home__content {
+    min-width: 320px !important;
+}
+.portfolio__modal-content {
+    min-width: 299px !important;
+}
+}
