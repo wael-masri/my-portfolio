@@ -7,9 +7,9 @@ const PortfolioItem = ({ img, title, details }) => {
     setModal(!modal);
   };
   return (
-    <div className="portfolio__item">
+    <div className="portfolio__item" onClick={toggleModal}>
       <img src={img} alt="" className="portfolio__img" />
-      <div className="portfolio__hover" onClick={toggleModal}>
+      <div className="portfolio__hover" >
         <h3 className="portfolio__title">{title}</h3>
       </div>
       {modal ? (

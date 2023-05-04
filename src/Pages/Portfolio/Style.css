@@ -7,7 +7,7 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-    z-index: 155;
+   
 }
 .portfolio__img{
     height: 250px;
@@ -24,12 +24,12 @@
     place-items: center;
     opacity: 0;
     transition: all .5s ease;
-    z-index: 155;
+   
 }
 
 .portfolio__item:hover .portfolio__hover{
     opacity: 1;
-    z-index: 550;
+ 
 }
 
 .portfolio__title{
