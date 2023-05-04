@@ -1,6 +1,6 @@
 .nav__menu {
     position: fixed;
-    inset-block: 0;
+    top:0;
     left: -100%;
     background-color: var(--container-color);
     width: 100%;
