@@ -131,6 +131,7 @@ img {
     position: absolute;
     inset-block: -2px;
     right: 0;
+    top: 0;
     width: 55px;
     border-radius: 50%;
     color: var(--text-white);
