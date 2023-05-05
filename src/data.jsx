@@ -301,7 +301,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "www.dribble.com",
+        desc: "https://main--joyful-lokum-bc9316.netlify.app/",
       },
     ],
   },
